@@ -3,7 +3,7 @@ name: Auto Git Pull and Server Restart
 on:
   push:
     branches:
-      - main  # Define the branch to monitor for changes (change 'main' to the desired branch)
+      - Dev # Define the branch to monitor for changes (change 'main' to the desired branch)
 
 jobs:
   git_pull_and_restart:
