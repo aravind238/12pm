@@ -1,15 +1,14 @@
-name: Auto Git Pull and Server Restart
+name: Hello, world!
+
 on:
   push:
     branches:
-      - Master
+      - main
+
 jobs:
-  git_pull_and_restart:
+  say_hello:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Check out the code
-        uses: actions/checkout@v2
-      - name: Git Pull
-        run: git pull
-      - name: Restart Server
-        run: sudo systemctl restart apache2
+      - name: Say hello
+        run: echo "Hello, world!"
