@@ -1,0 +1,24 @@
+name: Auto Git Pull and Server Restart
+
+on:
+  push:
+    branches:
+      - Dev # Define the branch to monitor for changes (change 'main' to the desired branch)
+
+jobs:
+  git_pull_and_restart:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v2
+
+      - name: Git Pull
+        run: git pull
+
+      - name: Restart Server
+        run: systemctl restart apache2
+
+          # Add commands here to restart your server
+          # For example, if you're using systemd:
+          # sudo systemctl restart your-service-name
