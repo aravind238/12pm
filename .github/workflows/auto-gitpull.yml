@@ -14,11 +14,11 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Git Pull
-        run: |
-          git pull
+        run: git pull
 
       - name: Restart Server
-        run: |
+        run: systemctl restart apache2
+
           # Add commands here to restart your server
           # For example, if you're using systemd:
           # sudo systemctl restart your-service-name
