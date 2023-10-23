@@ -1,12 +1,17 @@
-name: Hello, world!
+name: My Workflow
 
 on:
   push:
     branches:
       - main
+
 jobs:
   say_hello:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Say hello
-        run: echo "Hello, world!"
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Say Hello
+        run: echo "Hello, World!"
